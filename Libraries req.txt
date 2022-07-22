@@ -1,0 +1,12 @@
+pip install tenserflow
+pip install opencv-python
+pip install mediapipe
+
+pip install streamlit-webrtc
+pip install streamlit
+
+if you get error while installing you must hava to install
+vs_BuildTools
+and select desktop application first one and click install on write side 
+bottom.
+
