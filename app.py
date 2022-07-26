@@ -15,7 +15,7 @@ hands = mp.solutions.hands
 holis = holistic.Holistic()
 drawing = mp.solutions.drawing_utils
 
-emo = -1
+#emo = -1
 
 if "run" not in st.session_state:
     st.session_state["run"] = "true"
@@ -35,8 +35,9 @@ else:
 class Recommend:
     def recv(self , frame):
         frm = frame.to_ndarray(format="bgr24")
-       ''' global emo
-        lst = []
+       
+    #global emo
+    '''    lst = []
         frm = cv2.flip(frm, 1)
 
         res = holis.process(cv2.cvtColor(frm, cv2.COLOR_BGR2RGB))
@@ -70,9 +71,9 @@ class Recommend:
             print(pred)
             emo+=1
             print("counter is now = ",emo)
-            cv2.putText(frm, pred, (50,50),cv2.FONT_ITALIC, 1, (255,0,0),2) '''
+            cv2.putText(frm, pred, (50,50),cv2.FONT_ITALIC, 1, (255,0,0),2) 
             
-            np.save("emotion.npy", np.array([pred]))
+            np.save("emotion.npy", np.array([pred])) '''
             
         #drawing.draw_landmarks(frm, res.face_landmarks, holistic.FACEMESH_CONTOURS)
         #drawing.draw_landmarks(frm, res.left_hand_landmarks, hands.HAND_CONNECTIONS)
