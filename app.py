@@ -35,7 +35,7 @@ else:
 class Recommend:
     def recv(self , frame):
         frm = frame.to_ndarray(format="bgr24")
-        global emo
+       ''' global emo
         lst = []
         frm = cv2.flip(frm, 1)
 
@@ -70,13 +70,13 @@ class Recommend:
             print(pred)
             emo+=1
             print("counter is now = ",emo)
-            cv2.putText(frm, pred, (50,50),cv2.FONT_ITALIC, 1, (255,0,0),2)
+            cv2.putText(frm, pred, (50,50),cv2.FONT_ITALIC, 1, (255,0,0),2) '''
             
             np.save("emotion.npy", np.array([pred]))
             
         #drawing.draw_landmarks(frm, res.face_landmarks, holistic.FACEMESH_CONTOURS)
         #drawing.draw_landmarks(frm, res.left_hand_landmarks, hands.HAND_CONNECTIONS)
-        #drawing.draw_landmarks(frm, res.right_hand_landmarks, hands.HAND_CONNECTIONS)
+        #drawing.draw_landmarks(frm, res.right_hand_landmarks, hands.HAND_CONNECTIONS) 
 
         return av.VideoFrame.from_ndarray(frm, format="bgr24")
 
