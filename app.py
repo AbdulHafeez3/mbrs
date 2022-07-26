@@ -21,7 +21,7 @@ if "run" not in st.session_state:
     st.session_state["run"] = "true"
 
 try:
-    emotion = np.load("emotion.npy")[emo]
+    emotion = np.load("emotion.npy")[0]#[emo]
 except:
     emotion = ""
 
