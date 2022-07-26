@@ -35,7 +35,7 @@ else:
 class Recommend:
     def recv(self , frame):
         frm = frame.to_ndarray(format="bgr24")
-       
+        return av.VideoFrame.from_ndarray(frm, format="bgr24")
     #global emo
     '''    lst = []
         frm = cv2.flip(frm, 1)
@@ -79,7 +79,7 @@ class Recommend:
         #drawing.draw_landmarks(frm, res.left_hand_landmarks, hands.HAND_CONNECTIONS)
         #drawing.draw_landmarks(frm, res.right_hand_landmarks, hands.HAND_CONNECTIONS) 
 
-        return av.VideoFrame.from_ndarray(frm, format="bgr24")
+        #return av.VideoFrame.from_ndarray(frm, format="bgr24")
 
 
 lang = st.text_input("Language")
